@@ -10,8 +10,8 @@ class Card:
 
 #positive point values, varying.
 class Innovation_Card(Card):
-    def __init__(self, name, current_point_value, card_desc, cost):
-        super().__init__(name, current_point_value, card_desc)
+    def __init__(self, name, current_point_value, category, card_desc, cost):
+        super().__init__(name, current_point_value, category, card_desc)
         #cost: list of categories that will be pulled when this innovation card is drawn.
         self.cost = cost
 
@@ -26,3 +26,6 @@ class Cleanup_Card(Card):
         #removal: Specific Category of cards that this card can remove from a player's hand.
         self.removal = removal
     pass
+
+space_Exploration = Innovation_Card("Space Exploration", 7, "Exploration", "insert string here", ["Natural Resource Use", "Global Warming"])
+print(space_Exploration.name)
