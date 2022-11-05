@@ -115,10 +115,10 @@ for thing in exploration:
     print(thing.cost)
     print()
 '''
-self_Driving_Cars = Innovation_Card("Self Driving Cars", 5, "Travel", "Beyond helping those with disabilities, self driving cars would help us be a little more efficient, in that we won't have to focus on driving and will therefore be able to focus on other tasks.", ["NaturalResourceUse", "Global Warming"])
-sustainable_Aviation = Innovation_Card("Sustainable Aviation", 9, "Travel", "insert string here", ["NaturalResourceUse", "Global Warming"])
-accesible_Transportation = Innovation_Card("Accessible Public Transportation", 5, "Travel", "With access to more public transportation, people can save on gas and not have to spend as much in order to go places. This could ease up homelessness problems, open up job opportunities, and clear traffic up by a lot.", ["NaturalResourceUse", "Global Warming"])
-teleporation = Innovation_Card("Teleportation", 1, "Travel", "this one was mostly a joke. I mean, who doesn't want to be able to teleport places?", ["NaturalResourceUse", "Globabl Warming"])
+self_Driving_Cars = Innovation_Card("Self Driving Cars", 5, "Travel", "Beyond helping those with disabilities, self driving cars would help us be a little more efficient, in that we won't have to focus on driving and will therefore be able to focus on other tasks.", ["Natural Resource Use", "Global Warming"])
+sustainable_Aviation = Innovation_Card("Sustainable Aviation", 9, "Travel", "if aviation were less expensive, travel across planet could be less expensive and we'd be able to collaborate with our peers in person more often, improving our efficiency, because as nice as the internet is, sometimes the lag hurts more than the communication helps.", ["Natural Resource Use", "Global Warming"])
+accesible_Transportation = Innovation_Card("Accessible Public Transportation", 5, "Travel", "With access to more public transportation, people can save on gas and not have to spend as much in order to go places. This could ease up homelessness problems, open up job opportunities, and clear traffic up by a lot.", ["Natural Resource Use", "Global Warming"])
+teleporation = Innovation_Card("Teleportation", 1, "Travel", "this one was mostly a joke. I mean, who doesn't want to be able to teleport places?", ["Natural Resource Use", "Globabl Warming"])
 
 travel = [self_Driving_Cars, sustainable_Aviation, accesible_Transportation, teleporation]
 '''
@@ -130,10 +130,10 @@ for thing in travel:
     print(thing.cost)
     print()
 '''
-artifical_Intelligence = Innovation_Card("Artificial Intelligence", 8, "Computer Tech", "insert string here", ["Deforestation", "Water Pollution"])
-cryptocurrency = Innovation_Card("Cryptocurrency", 3, "Computer Tech", "insert string here", ["Deforestation", "Water Pollution"])
-virtual_Reality = Innovation_Card("Virtual and Augmented Reality", 5, "Computer Tech", "insert string here", ["Deforestation", "Water Pollution"])
-quantum_Computing = Innovation_Card("Quantum Computing", 7, "Computer Tech", "insert string here", ["Deforestation", "Water Pollution"])
+artifical_Intelligence = Innovation_Card("Artificial Intelligence", 8, "Computer Tech", "the smarter our computers get, the less we gotta do", ["Deforestation", "Water Pollution"])
+cryptocurrency = Innovation_Card("Cryptocurrency", 3, "Computer Tech", "feel like i should not we're not techbros.", ["Deforestation", "Water Pollution"])
+virtual_Reality = Innovation_Card("Virtual and Augmented Reality", 5, "Computer Tech", "there're a fair amount of tools that could help us in the long run with vr and ar, whether it comes to AR warning us of dangers in real time, or VR teaching us how to perform tasks without the stress of a live situation.", ["Deforestation", "Water Pollution"])
+quantum_Computing = Innovation_Card("Quantum Computing", 7, "Computer Tech", "who doesn't want more powerful computing?", ["Deforestation", "Water Pollution"])
 
 computer_Tech = [artifical_Intelligence, cryptocurrency, virtual_Reality, quantum_Computing]
 '''
@@ -175,7 +175,7 @@ for thing in cleanup_cards:
 '''
 
 ### TESTING ###
-'''
+
 one = []
 two = []
 player = one
@@ -189,16 +189,17 @@ print()
 harmful_Gas_Filtering.draw(player)
 for thing in player:
     print(thing.name)
+print()
 
 for thing in one:
-    print(thing)
+    print(thing.name)
+print()
 
 for thing in two:
-    print(thing)
-
+    print(thing.name)
+print()
 player = one
 
 self_Driving_Cars.draw(player)
 for thing in player:
     print(thing.name)
-'''
