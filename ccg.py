@@ -26,6 +26,3 @@ class Cleanup_Card(Card):
         #removal: Specific Category of cards that this card can remove from a player's hand.
         self.removal = removal
     pass
-
-space_Exploration = Innovation_Card("Space Exploration", 7, "Exploration", "insert string here", ["Natural Resource Use", "Global Warming"])
-print(space_Exploration.name)
