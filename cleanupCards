@@ -1,0 +1,11 @@
+from ccg import Cleanup_Card
+
+harmful_Gas_Filtering = Cleanup_Card("Harmful Gas Filtering", 0, "Radical Innovations", "desc", "Global Warming")
+nuclear_Energy = Cleanup_Card("Nuclear Energy", 0,"Radical Innovations", "desc", "Natural Resource Use")
+reforestation = Cleanup_Card("Reforestation",0,"Radical Innovations", "desc", "Deforestation")
+absorb_Oil = Cleanup_Card("Absorb All Oil Wastes", 0, "Radical Innovation", "desc", "Water Pollution")
+
+cleanup_cards = [harmful_Gas_Filtering,nuclear_Energy,reforestation, absorb_Oil]
+for thing in cleanup_cards:
+    print(thing.name)
+    print(thing.removal)
