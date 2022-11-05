@@ -175,7 +175,7 @@ for thing in cleanup_cards:
 '''
 
 ### TESTING ###
-
+'''
 one = []
 two = []
 player = one
@@ -203,3 +203,4 @@ player = one
 self_Driving_Cars.draw(player)
 for thing in player:
     print(thing.name)
+'''
