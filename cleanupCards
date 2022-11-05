@@ -9,3 +9,4 @@ cleanup_cards = [harmful_Gas_Filtering,nuclear_Energy,reforestation, absorb_Oil]
 for thing in cleanup_cards:
     print(thing.name)
     print(thing.removal)
+    print()
