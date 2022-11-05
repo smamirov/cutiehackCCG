@@ -1,5 +1,4 @@
 from tkinter import *
-from en
 
 root = Tk()
 root.title("Wasteful Innovation")
