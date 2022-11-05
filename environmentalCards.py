@@ -24,6 +24,4 @@ mining = Environmental_Card("Mining", -5, "Deforestation", "Description")
 expansion = Environmental_Card("Expansion and Infrastructure", -5, "Deforestation", "Description")
 climateChange = Environmental_Card("Climate Change", -5, "Deforestation", "Description")
 
-# Test
-print(generatingPower.name, generatingPower.category, generatingPower.current_point_value, generatingPower.card_desc)
 
