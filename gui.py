@@ -18,6 +18,34 @@ def readDescription(i):
     label = Label(top, text=textString)
     label.pack()
 
+def pick(i):
+    #myCanvas.create_line(x1, y1, x2, y2, fill="red")
+    if i == 1:
+        pickButton1["state"] = "disabled"
+    elif i == 2:
+        pickButton2["state"] = "disabled"
+    elif i == 3:
+        pickButton3["state"] = "disabled"
+    elif i == 4:
+        pickButton4["state"] = "disabled"
+    elif i == 5:
+        pickButton5["state"] = "disabled"
+    elif i == 6:
+        pickButton6["state"] = "disabled"
+    elif i == 7:
+        pickButton7["state"] = "disabled"
+    elif i == 8:
+        pickButton8["state"] = "disabled"
+    elif i == 9:
+        pickButton9["state"] = "disabled"
+    elif i == 10:
+        pickButton10["state"] = "disabled"
+    elif i == 11:
+        pickButton11["state"] = "disabled"
+    elif i == 12:
+        pickButton12["state"] = "disabled"
+    
+    
 
 myCanvas = Canvas(root, bg="white")
 #myCanvas.grid(row=0, column=0, columnspan=3, sticky='ew')
@@ -41,7 +69,7 @@ for card in availableInnovationCards:
     myCanvas.create_text(w, h, text=card.name, fill="black")
     myCanvas.create_text(w, h2, text=f'Category: {card.category}', fill="black")
     myCanvas.create_text(w, h3, text=card.current_point_value, fill="black")
-        #myCanvas.create_text(w, h4, text="Description", fill="black")
+    #myCanvas.create_text(w, h4, text="Description", fill="black")
     w += 160
     w2 += 160
 
@@ -58,6 +86,7 @@ myButton10 = Button(root, text="Description", command= lambda: readDescription(9
 myButton11 = Button(root, text="Description", command= lambda: readDescription(10))
 myButton12 = Button(root, text="Description", command= lambda: readDescription(11))
 myButton13 = Button(root, text="Description", command= lambda: readDescription(12))
+
 myButton.place(x=50, y=150)
 myButton2.place(x=210, y= 150)
 myButton3.place(x=370, y=150)
@@ -71,6 +100,31 @@ myButton10.place(x=1490, y= 150)
 myButton11.place(x=1650, y=150)
 myButton12.place(x=1810, y= 150)
 
+pickButton1 = Button(root, text="Pick Card", command=lambda:pick(1))
+pickButton2 = Button(root, text="Pick Card", command=lambda:pick(2))
+pickButton3 = Button(root, text="Pick Card", command=lambda:pick(3))
+pickButton4 = Button(root, text="Pick Card", command=lambda:pick(4))
+pickButton5 = Button(root, text="Pick Card", command=lambda:pick(5))
+pickButton6 = Button(root, text="Pick Card", command=lambda:pick(6))
+pickButton7 = Button(root, text="Pick Card", command=lambda:pick(7))
+pickButton8 = Button(root, text="Pick Card", command=lambda:pick(8))
+pickButton9 = Button(root, text="Pick Card", command=lambda:pick(9))
+pickButton10 = Button(root, text="Pick Card", command=lambda:pick(10))
+pickButton11 = Button(root, text="Pick Card", command=lambda:pick(11))
+pickButton12 = Button(root, text="Pick Card", command=lambda:pick(12))
+
+pickButton1.place(x=55, y=200)
+pickButton2.place(x=215, y=200)
+pickButton3.place(x=375, y=200)
+pickButton4.place(x=535, y=200)
+pickButton5.place(x=695, y=200)
+pickButton6.place(x=855, y=200)
+pickButton7.place(x=1015, y=200)
+pickButton8.place(x=1175, y=200)
+pickButton9.place(x=1335, y=200)
+pickButton10.place(x=1495, y=200)
+pickButton11.place(x=1655, y=200)
+pickButton12.place(x=1815, y=200)
 
 
 
