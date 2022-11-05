@@ -1,4 +1,4 @@
-
+import random
 
 class Card:
     def __init__(self, name, current_point_value, category, card_desc):
@@ -26,13 +26,21 @@ class Innovation_Card(Card):
         super().draw(player)
         for category in self.cost:
             if category == 'Global Warming':
-                global_Warming.pop().draw(player)
+                length = len(global_Warming)
+                i = random.randint(0,length-1)
+                global_Warming.pop(i).draw(player)
             elif category == 'Natural Resource Use':
-                natural_Resource.pop().draw(player)
+                length = len(natural_Resource)
+                i = random.randint(0,length-1)
+                natural_Resource.pop(i).draw(player)
             elif category == 'Water Pollution':
-                water_pollution.pop().draw(player)
+                length = len(water_pollution)
+                i = random.randint(0,length-1)
+                water_pollution.pop(i).draw(player)
             elif category == 'Deforestation':
-                deforestation.pop().draw(player)
+                length = len(deforestation)
+                i = random.randint(0,length-1)
+                deforestation.pop(i).draw(player)
             else:
                 print("something messed up")
                 return -1
@@ -163,7 +171,6 @@ for thing in cleanup_cards:
 '''
 
 ### TESTING ###
-'''
 player = []
 deep_Sea_Exploration.draw(player)
 for thing in player:
@@ -172,4 +179,3 @@ print()
 harmful_Gas_Filtering.draw(player)
 for thing in player:
     print(thing.name)
-'''
