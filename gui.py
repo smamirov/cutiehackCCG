@@ -126,11 +126,30 @@ pickButton10.place(x=1495, y=200)
 pickButton11.place(x=1655, y=200)
 pickButton12.place(x=1815, y=200)
 
+#player hands: currently an empty list, because they don't have any cards.
+playerOne = []
+playerTwo = []
+
+### TODO: on button click: flip player
+current_player = playerOne
+# or player = playerTwo
+
+#assuming button 0 is pressed:
+space_Exploration.draw(current_player)
+current_player = playerTwo
+
+#assuming button 5 is pressed:
+teleporation.draw(current_player)
+current_player = playerOne
+
+#and so on
+
 
 
 '''gwDeck = ImageTk.PhotoImage(Image.open('deck.png'))
 gwLabel = Label(image=gwDeck)
 gwLabel.pack()'''
+
 
 
 root.mainloop()

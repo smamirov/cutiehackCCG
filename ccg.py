@@ -72,7 +72,6 @@ class Cleanup_Card(Card):
 # Testing below that. please don't look. #
 ##########################################
 
-
 # Global Warming Cards
 generatingPower = Environmental_Card("Generating Power", -5, "Global Warming", "Description")
 manufacturingGoods = Environmental_Card("Manufacturing Goods", -1, "Global Warming", "Description")
@@ -101,8 +100,10 @@ expansion = Environmental_Card("Expansion and Infrastructure", -5, "Deforestatio
 climateChange = Environmental_Card("Climate Change", -5, "Deforestation", "Description")
 deforestation = [timberLogging, mining, expansion, climateChange]
 
-space_Exploration = Innovation_Card("Space Exploration", 7, "Exploration", "insert string here", ["Natural Resource Use", "Global Warming"])
-deep_Sea_Exploration = Innovation_Card("Deep Sea Exploration", 4, "Exploration", "insert string here", ["Natural Resource Use", "Global Warming"])
+# Innovation_Cards
+
+space_Exploration = Innovation_Card("Space Exploration", 7, "Exploration", "More landmass means more space to do what we need to do, whether that's farming, research, or whatever, so we believe that finding a habitable planet elsehere in the universe could prove to be invaluable.", ["Natural Resource Use", "Global Warming"])
+deep_Sea_Exploration = Innovation_Card("Deep Sea Exploration", 4, "Exploration", "We know almost as little about the seas that seperate us as we do about the space over our heads. If we can figure out a way to make use of what's below us, maybe intergalactic travel won't be as necessary as soon.", ["Natural Resource Use", "Global Warming"])
 
 exploration = [space_Exploration, deep_Sea_Exploration]
 '''
@@ -114,10 +115,10 @@ for thing in exploration:
     print(thing.cost)
     print()
 '''
-self_Driving_Cars = Innovation_Card("Self Driving Cars", 5, "Travel", "insert string here", ["NaturalResourceUse", "Global Warming"])
+self_Driving_Cars = Innovation_Card("Self Driving Cars", 5, "Travel", "Beyond helping those with disabilities, self driving cars would help us be a little more efficient, in that we won't have to focus on driving and will therefore be able to focus on other tasks.", ["NaturalResourceUse", "Global Warming"])
 sustainable_Aviation = Innovation_Card("Sustainable Aviation", 9, "Travel", "insert string here", ["NaturalResourceUse", "Global Warming"])
-accesible_Transportation = Innovation_Card("Accessible Public Transportation", 5, "Travel", "insert string here", ["NaturalResourceUse", "Global Warming"])
-teleporation = Innovation_Card("Teleportation", 1, "Travel", "insert string here", ["NaturalResourceUse", "Globabl Warming"])
+accesible_Transportation = Innovation_Card("Accessible Public Transportation", 5, "Travel", "With access to more public transportation, people can save on gas and not have to spend as much in order to go places. This could ease up homelessness problems, open up job opportunities, and clear traffic up by a lot.", ["NaturalResourceUse", "Global Warming"])
+teleporation = Innovation_Card("Teleportation", 1, "Travel", "this one was mostly a joke. I mean, who doesn't want to be able to teleport places?", ["NaturalResourceUse", "Globabl Warming"])
 
 travel = [self_Driving_Cars, sustainable_Aviation, accesible_Transportation, teleporation]
 '''
@@ -144,7 +145,7 @@ for thing in computer_Tech:
     print(thing.cost)
     print()
 '''
-panacea = Innovation_Card("Cure for All Diseases", 10, "Medical", "insert string here", ["Water Pollution", "Deforestation"])
+panacea = Innovation_Card("Cure for All Diseases", 10, "Medical", "Although we have many cures for a few different disease, it is highly unrealistic for us to assume that a true panacea will ever be made. Just as humans keep evolving, so too do diseases, so in this infinite arms race there will be no true winners.", ["Water Pollution", "Deforestation"])
 food = Innovation_Card("Printable Food", 10, "Medical", "insert string here", ["Water Pollution", "Deforestation"])
 
 medical = [panacea, food]
@@ -157,6 +158,9 @@ for thing in medical:
     print(thing.cost)
     print()
 '''
+
+# Radical Innovation Cards
+
 harmful_Gas_Filtering = Cleanup_Card("Harmful Gas Filtering", 0, "Radical Innovations", "desc", "Global Warming")
 nuclear_Energy = Cleanup_Card("Nuclear Energy", 0,"Radical Innovations", "desc", "Natural Resource Use")
 reforestation = Cleanup_Card("Reforestation",0,"Radical Innovations", "desc", "Deforestation")
@@ -171,11 +175,30 @@ for thing in cleanup_cards:
 '''
 
 ### TESTING ###
-player = []
+'''
+one = []
+two = []
+player = one
+player = two
+
 deep_Sea_Exploration.draw(player)
 for thing in player:
     print(thing.name)
 print()
+
 harmful_Gas_Filtering.draw(player)
 for thing in player:
     print(thing.name)
+
+for thing in one:
+    print(thing)
+
+for thing in two:
+    print(thing)
+
+player = one
+
+self_Driving_Cars.draw(player)
+for thing in player:
+    print(thing.name)
+'''
