@@ -25,16 +25,16 @@ class Innovation_Card(Card):
     def draw(self, player):
         super().draw(player)
         for category in self.cost:
-            if category is "Global Warming":
+            if category == 'Global Warming':
                 global_Warming.pop().draw(player)
-            elif category is "Natural Resource Use":
+            elif category == 'Natural Resource Use':
                 natural_Resource.pop().draw(player)
-            elif category is "Water Pollution":
+            elif category == 'Water Pollution':
                 water_pollution.pop().draw(player)
-            elif category is "Deforestation":
+            elif category == 'Deforestation':
                 deforestation.pop().draw(player)
             else:
-                print("something fucked up")
+                print("something messed up")
                 return -1
         return
 
@@ -48,6 +48,15 @@ class Cleanup_Card(Card):
         super().__init__(name, current_point_value, card_desc, category)
         #removal: Specific Category of cards that this card can remove from a player's hand.
         self.removal = removal
+    
+    def draw(self, player):
+        super().draw(player)
+        for card in player:
+            if card.category == self.removal:
+                player.pop(player.index(card))
+                return
+        print('no matching cards found!')
+        return
     pass
 
 ##########################################
@@ -153,10 +162,14 @@ for thing in cleanup_cards:
     print()
 '''
 
-
-
+### TESTING ###
+'''
 player = []
 deep_Sea_Exploration.draw(player)
 for thing in player:
     print(thing.name)
-
+print()
+harmful_Gas_Filtering.draw(player)
+for thing in player:
+    print(thing.name)
+'''
