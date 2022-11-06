@@ -27,20 +27,20 @@ class Innovation_Card(Card):
         for category in self.cost:
             if category == 'Global Warming':
                 length = len(global_Warming)
-                i = random.randint(0,length-1)
-                global_Warming.pop(i).draw(player)
+                #i = random.randint(0,length-1)
+                global_Warming.pop().draw(player)
             elif category == 'Natural Resource Use':
                 length = len(natural_Resource)
-                i = random.randint(0,length-1)
-                natural_Resource.pop(i).draw(player)
+                #i = random.randint(0,length-1)
+                natural_Resource.pop().draw(player)
             elif category == 'Water Pollution':
                 length = len(water_pollution)
-                i = random.randint(0,length-1)
-                water_pollution.pop(i).draw(player)
+                #i = random.randint(0,length-1)
+                water_pollution.pop().draw(player)
             elif category == 'Deforestation':
                 length = len(deforestation)
-                i = random.randint(0,length-1)
-                deforestation.pop(i).draw(player)
+                #i = random.randint(0,length-1)
+                deforestation.pop().draw(player)
             else:
                 print("something messed up")
                 return -1
@@ -176,7 +176,7 @@ for thing in cleanup_cards:
 
 ### TESTING ###
 
-one = []
+'''one = []
 two = []
 counter = [0]
 
@@ -198,7 +198,7 @@ for i in one:
 for j in two:
     hand2.append(j.name)
 print(hand1)
-print(hand2)
+print(hand2)'''
 '''
 deep_Sea_Exploration.draw(player)
 for thing in player:

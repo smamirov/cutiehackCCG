@@ -60,7 +60,7 @@ def pick(i):
             accesible_Transportation.draw(one)
         else:
             accesible_Transportation.draw(two)
-        counter.append(0).draw(current_player)
+        counter.append(0)
     elif i == 6:
         pickButton6["state"] = "disabled"
         if len(counter) % 2 == 0:
@@ -199,13 +199,15 @@ pickButton12.place(x=1815, y=200)
 button = Button(root, text="Your Turn", command=lambda:refresh(current_player)).pack()'''
 
 
-
 hand1 = []
 hand2 = []
 for i in one:
     hand1.append(i.name)
 for j in two:
     hand2.append(j.name)
+print(hand1)
+print(hand2)
+
 
 root.mainloop()
 '''hand = []
@@ -219,3 +221,4 @@ hand2 = []
 for i in two:
     hand2.append(i.name)
 print(hand2)'''
+
