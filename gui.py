@@ -15,6 +15,7 @@ one = []
 two = []
 counter = [0]
 
+
 def readDescription(i):
     top = Toplevel(root)
     top.lift()
@@ -198,6 +199,12 @@ pickButton12.place(x=1815, y=200)
 button = Button(root, text="Your Turn", command=lambda:refresh(current_player)).pack()'''
 
 
+
+
+
+root.mainloop()
+
+
 hand1 = []
 hand2 = []
 for i in one:
@@ -206,18 +213,4 @@ for j in two:
     hand2.append(j.name)
 print(hand1)
 print(hand2)
-
-
-root.mainloop()
-'''hand = []
-for i in one:
-    hand.append(i)
-print(hand)
-halfway = len(hand)//2
-two = hand[halfway:]
-
-hand2 = []
-for i in two:
-    hand2.append(i.name)
-print(hand2)'''
-
+print(len(hand1), len(hand2))

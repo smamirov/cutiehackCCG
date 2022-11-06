@@ -27,22 +27,22 @@ class Innovation_Card(Card):
         for category in self.cost:
             if category == 'Global Warming':
                 length = len(global_Warming)
-                if length > 1:
+                if length > 0:
                     i = random.randint(0,length-1)
                     global_Warming.pop(i).draw(player)
             elif category == 'Natural Resource Use':
                 length = len(natural_Resource)
-                if length > 1:
+                if length > 0:
                     i = random.randint(0,length-1)
                     natural_Resource.pop(i).draw(player)
             elif category == 'Water Pollution':
                 length = len(water_pollution)
-                if length > 1:
+                if length > 0:
                     i = random.randint(0,length-1)
                     water_pollution.pop(i).draw(player)
             elif category == 'Deforestation':
                 length = len(deforestation)
-                if length > 1:
+                if length > 0:
                     i = random.randint(0,length-1)
                     deforestation.pop(i).draw(player)
             else:
