@@ -42,34 +42,74 @@ def pick(i):
         counter.append(0)
     elif i == 3:
         pickButton3["state"] = "disabled"
-        self_Driving_Cars.draw(current_player)
+        if len(counter) % 2 == 0:
+            self_Driving_Cars.draw(one)
+        else:
+            self_Driving_Cars.draw(two)
+        counter.append(0)
     elif i == 4:
         pickButton4["state"] = "disabled"
-        sustainable_Aviation.draw(current_player)
+        if len(counter) % 2 == 0:
+            sustainable_Aviation.draw(one)
+        else:
+            sustainable_Aviation.draw(two)
+        counter.append(0)
     elif i == 5:
         pickButton5["state"] = "disabled"
-        accesible_Transportation.draw(current_player)
+        if len(counter) % 2 == 0:
+            accesible_Transportation.draw(one)
+        else:
+            accesible_Transportation.draw(two)
+        counter.append(0).draw(current_player)
     elif i == 6:
         pickButton6["state"] = "disabled"
-        teleporation.draw(current_player)
+        if len(counter) % 2 == 0:
+            teleporation.draw(one)
+        else:
+            teleporation.draw(two)
+        counter.append(0)
     elif i == 7:
         pickButton7["state"] = "disabled"
-        artifical_Intelligence.draw(current_player)
+        if len(counter) % 2 == 0:
+            artifical_Intelligence.draw(one)
+        else:
+            artifical_Intelligence.draw(two)
+        counter.append(0)
     elif i == 8:
         pickButton8["state"] = "disabled"
-        cryptocurrency.draw(current_player)
+        if len(counter) % 2 == 0:
+            cryptocurrency.draw(one)
+        else:
+            cryptocurrency.draw(two)
+        counter.append(0)
     elif i == 9:
         pickButton9["state"] = "disabled"
-        virtual_Reality.draw(current_player)
+        if len(counter) % 2 == 0:
+            virtual_Reality.draw(one)
+        else:
+            virtual_Reality.draw(two)
+        counter.append(0)
     elif i == 10:
         pickButton10["state"] = "disabled"
-        quantum_Computing.draw(current_player)
+        if len(counter) % 2 == 0:
+            quantum_Computing.draw(one)
+        else:
+            quantum_Computing.draw(two)
+        counter.append(0)
     elif i == 11:
         pickButton11["state"] = "disabled"
-        panacea.draw(current_player)
+        if len(counter) % 2 == 0:
+            panacea.draw(one)
+        else:
+            panacea.draw(two)
+        counter.append(0)
     elif i == 12:
         pickButton12["state"] = "disabled"
-        food.draw(current_player)
+        if len(counter) % 2 == 0:
+            food.draw(one)
+        else:
+            food.draw(two)
+        counter.append(0)
 
 myCanvas = Canvas(root, bg="white")
 #myCanvas.grid(row=0, column=0, columnspan=3, sticky='ew')
