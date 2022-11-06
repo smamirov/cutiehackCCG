@@ -180,7 +180,7 @@ for thing in cleanup_cards:
 
 ### TESTING ###
 
-one = []
+'''one = []
 two = []
 counter = [0]
 
@@ -226,7 +226,7 @@ for i in one:
 for j in two:
     hand2.append(j.name)
 print(hand1)
-print(hand2)
+print(hand2)'''
 '''
 deep_Sea_Exploration.draw(player)
 for thing in player:
