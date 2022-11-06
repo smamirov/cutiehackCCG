@@ -27,20 +27,24 @@ class Innovation_Card(Card):
         for category in self.cost:
             if category == 'Global Warming':
                 length = len(global_Warming)
-                i = random.randint(0,length-1)
-                global_Warming.pop(i).draw(player)
+                if length > 1:
+                    i = random.randint(0,length-1)
+                    global_Warming.pop(i).draw(player)
             elif category == 'Natural Resource Use':
                 length = len(natural_Resource)
-                i = random.randint(0,length-1)
-                natural_Resource.pop(i).draw(player)
+                if length > 1:
+                    i = random.randint(0,length-1)
+                    natural_Resource.pop(i).draw(player)
             elif category == 'Water Pollution':
                 length = len(water_pollution)
-                i = random.randint(0,length-1)
-                water_pollution.pop(i).draw(player)
+                if length > 1:
+                    i = random.randint(0,length-1)
+                    water_pollution.pop(i).draw(player)
             elif category == 'Deforestation':
                 length = len(deforestation)
-                i = random.randint(0,length-1)
-                deforestation.pop(i).draw(player)
+                if length > 1:
+                    i = random.randint(0,length-1)
+                    deforestation.pop(i).draw(player)
             else:
                 print("something messed up")
                 return -1
@@ -190,6 +194,30 @@ if len(counter) % 2 == 0:
     deep_Sea_Exploration.draw(one)
 else:
     deep_Sea_Exploration.draw(two)
+counter.append(0)
+
+if len(counter) % 2 == 0:
+    self_Driving_Cars.draw(one)
+else:
+    self_Driving_Cars.draw(two)
+counter.append(0)
+
+if len(counter) % 2 == 0:
+    sustainable_Aviation.draw(one)
+else:
+    sustainable_Aviation.draw(two)
+
+if len(counter) % 2 == 0:
+    accesible_Transportation.draw(one)
+else:
+    accesible_Transportation.draw(two)
+
+if len(counter) % 2 == 0:
+    teleporation.draw(one)
+else:
+    teleporation.draw(two)
+counter.append(0)
+counter.append(0)
 counter.append(0)
 hand1 = []
 hand2 = []

@@ -15,7 +15,6 @@ one = []
 two = []
 counter = [0]
 
-
 def readDescription(i):
     top = Toplevel(root)
     top.lift()
