@@ -1,14 +1,37 @@
 from tkinter import *
-from environmentalCards import *
-from innovationCards import *
+#from environmentalCards import *
+#from innovationCards import *
 from PIL import ImageTk, Image
+from ccg import *
 
 root = Tk()
 root.title("Wasteful Innovation")
 root.geometry('800x600')
 root.state("zoomed")
 
-availableInnovationCards = [space_Exploration, Deep_Sea_Exploration, self_Driving_Cars, sustainable_Aviation, accesible_Transportation, teleporation, artifical_Intelligence, cryptocurrency, virtual_Reality, quantum_Computing, panacea, food]
+availableInnovationCards = [space_Exploration, deep_Sea_Exploration, self_Driving_Cars, sustainable_Aviation, accesible_Transportation, teleporation, artifical_Intelligence, cryptocurrency, virtual_Reality, quantum_Computing, panacea, food]
+
+#player hands: currently an empty list, because they don't have any cards.
+playerOne = 1
+playerTwo = 2
+
+### TODO: on button click: flip player
+current_player = playerOne
+playerOneHand = []
+playerTwoHand = []
+currentPlayerHand = playerOneHand
+# or player = playerTwo
+
+#assuming button 0 is pressed:
+
+#space_Exploration.draw(current_player)
+#current_player = playerTwo
+
+#assuming button 5 is pressed:
+#teleporation.draw(current_player)
+#current_player = playerOne
+
+#and so on
 
 def readDescription(i):
     top = Toplevel(root)
@@ -18,33 +41,96 @@ def readDescription(i):
     label = Label(top, text=textString)
     label.pack()
 
-def pick(i):
+def pick(i, current_player, currentPlayerHand):
     #myCanvas.create_line(x1, y1, x2, y2, fill="red")
     if i == 1:
         pickButton1["state"] = "disabled"
+        space_Exploration.draw(currentPlayerHand)
+        if current_player == 1:
+            current_player = 2
+            currentPlayerHand = playerTwoHand
+        else:
+            current_player = 1
+            currentPlayerHand = playerOneHand
     elif i == 2:
         pickButton2["state"] = "disabled"
+        deep_Sea_Exploration.draw(currentPlayerHand)
+        if current_player == 1:
+            current_player = 2
+            currentPlayerHand = playerTwoHand
+        else:
+            current_player = 1
+            currentPlayerHand = playerOneHand
     elif i == 3:
         pickButton3["state"] = "disabled"
+        self_Driving_Cars.draw(current_player)
+        if current_player is playerOne:
+            current_player = playerTwo
+        else:
+            current_player = playerOne
     elif i == 4:
         pickButton4["state"] = "disabled"
+        sustainable_Aviation.draw(current_player)
+        if current_player is playerOne:
+            current_player = playerTwo
+        else:
+            current_player = playerOne
     elif i == 5:
         pickButton5["state"] = "disabled"
+        accesible_Transportation.draw(current_player)
+        if current_player is playerOne:
+            current_player = playerTwo
+        else:
+            current_player = playerOne
     elif i == 6:
         pickButton6["state"] = "disabled"
+        teleporation.draw(current_player)
+        if current_player is playerOne:
+            current_player = playerTwo
+        else:
+            current_player = playerOne
     elif i == 7:
         pickButton7["state"] = "disabled"
+        artifical_Intelligence.draw(current_player)
+        if current_player is playerOne:
+            current_player = playerTwo
+        else:
+            current_player = playerOne
     elif i == 8:
         pickButton8["state"] = "disabled"
+        cryptocurrency.draw(current_player)
+        if current_player is playerOne:
+            current_player = playerTwo
+        else:
+            current_player = playerOne
     elif i == 9:
         pickButton9["state"] = "disabled"
+        virtual_Reality.draw(current_player)
+        if current_player is playerOne:
+            current_player = playerTwo
+        else:
+            current_player = playerOne
     elif i == 10:
         pickButton10["state"] = "disabled"
+        quantum_Computing.draw(current_player)
+        if current_player is playerOne:
+            current_player = playerTwo
+        else:
+            current_player = playerOne
     elif i == 11:
         pickButton11["state"] = "disabled"
+        panacea.draw(current_player)
+        if current_player is playerOne:
+            current_player = playerTwo
+        else:
+            current_player = playerOne
     elif i == 12:
         pickButton12["state"] = "disabled"
-    
+        food.draw(current_player)
+        if current_player is playerOne:
+            current_player = playerTwo
+        else:
+            current_player = playerOne
     
 
 myCanvas = Canvas(root, bg="white")
@@ -100,18 +186,18 @@ myButton10.place(x=1490, y= 150)
 myButton11.place(x=1650, y=150)
 myButton12.place(x=1810, y= 150)
 
-pickButton1 = Button(root, text="Pick Card", command=lambda:pick(1))
-pickButton2 = Button(root, text="Pick Card", command=lambda:pick(2))
-pickButton3 = Button(root, text="Pick Card", command=lambda:pick(3))
-pickButton4 = Button(root, text="Pick Card", command=lambda:pick(4))
-pickButton5 = Button(root, text="Pick Card", command=lambda:pick(5))
-pickButton6 = Button(root, text="Pick Card", command=lambda:pick(6))
-pickButton7 = Button(root, text="Pick Card", command=lambda:pick(7))
-pickButton8 = Button(root, text="Pick Card", command=lambda:pick(8))
-pickButton9 = Button(root, text="Pick Card", command=lambda:pick(9))
-pickButton10 = Button(root, text="Pick Card", command=lambda:pick(10))
-pickButton11 = Button(root, text="Pick Card", command=lambda:pick(11))
-pickButton12 = Button(root, text="Pick Card", command=lambda:pick(12))
+pickButton1 = Button(root, text="Pick Card", command=lambda:pick(1, current_player, currentPlayerHand))
+pickButton2 = Button(root, text="Pick Card", command=lambda:pick(2, current_player, currentPlayerHand))
+pickButton3 = Button(root, text="Pick Card", command=lambda:pick(3, current_player))
+pickButton4 = Button(root, text="Pick Card", command=lambda:pick(4, current_player))
+pickButton5 = Button(root, text="Pick Card", command=lambda:pick(5, current_player))
+pickButton6 = Button(root, text="Pick Card", command=lambda:pick(6, current_player))
+pickButton7 = Button(root, text="Pick Card", command=lambda:pick(7, current_player))
+pickButton8 = Button(root, text="Pick Card", command=lambda:pick(8, current_player))
+pickButton9 = Button(root, text="Pick Card", command=lambda:pick(9, current_player))
+pickButton10 = Button(root, text="Pick Card", command=lambda:pick(10, current_player))
+pickButton11 = Button(root, text="Pick Card", command=lambda:pick(11, current_player))
+pickButton12 = Button(root, text="Pick Card", command=lambda:pick(12, current_player))
 
 pickButton1.place(x=55, y=200)
 pickButton2.place(x=215, y=200)
@@ -126,23 +212,6 @@ pickButton10.place(x=1495, y=200)
 pickButton11.place(x=1655, y=200)
 pickButton12.place(x=1815, y=200)
 
-#player hands: currently an empty list, because they don't have any cards.
-playerOne = []
-playerTwo = []
-
-### TODO: on button click: flip player
-current_player = playerOne
-# or player = playerTwo
-
-#assuming button 0 is pressed:
-space_Exploration.draw(current_player)
-current_player = playerTwo
-
-#assuming button 5 is pressed:
-teleporation.draw(current_player)
-current_player = playerOne
-
-#and so on
 
 
 
@@ -150,6 +219,23 @@ current_player = playerOne
 gwLabel = Label(image=gwDeck)
 gwLabel.pack()'''
 
+'''def refresh():
+    root.configure()
+    print(current_player)
+    pickButton1.configure(command=lambda:pick(1, current_player, currentPlayerHand))
+    pickButton2.configure(command=lambda:pick(2, current_player, currentPlayerHand))
+    if playerOneHand:
+        print(playerOneHand[0].name)
+    if playerTwoHand:
+        print(playerTwoHand[0].name)
 
-
+button = Button(root, text="Your Turn", command=refresh).pack()'''
+if playerOneHand:
+    print(playerOneHand[0].name)
+if playerTwoHand:
+    print(playerTwoHand[0].name)
 root.mainloop()
+'''if playerOneHand:
+        print(playerOneHand[0].name)
+if playerTwoHand:
+    print(playerTwoHand[0].name)'''
