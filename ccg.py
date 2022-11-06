@@ -175,12 +175,31 @@ for thing in cleanup_cards:
 '''
 
 ### TESTING ###
-'''
+
 one = []
 two = []
-player = one
-player = two
+counter = [0]
 
+if len(counter) % 2 == 0:
+    space_Exploration.draw(one)
+else:
+    space_Exploration.draw(two)
+counter.append(0)
+
+if len(counter) % 2 == 0:
+    deep_Sea_Exploration.draw(one)
+else:
+    deep_Sea_Exploration.draw(two)
+counter.append(0)
+hand1 = []
+hand2 = []
+for i in one:
+    hand1.append(i.name)
+for j in two:
+    hand2.append(j.name)
+print(hand1)
+print(hand2)
+'''
 deep_Sea_Exploration.draw(player)
 for thing in player:
     print(thing.name)
@@ -202,5 +221,4 @@ player = one
 
 self_Driving_Cars.draw(player)
 for thing in player:
-    print(thing.name)
-'''
+    print(thing.name)'''
